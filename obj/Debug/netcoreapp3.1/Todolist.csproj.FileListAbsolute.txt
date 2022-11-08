@@ -1,0 +1,6 @@
+E:\LapTrinh\NetCore\Todolist\obj\Debug\netcoreapp3.1\Todolist.csproj.AssemblyReference.cache
+E:\LapTrinh\NetCore\Todolist\obj\Debug\netcoreapp3.1\Todolist.GeneratedMSBuildEditorConfig.editorconfig
+E:\LapTrinh\NetCore\Todolist\obj\Debug\netcoreapp3.1\Todolist.AssemblyInfoInputs.cache
+E:\LapTrinh\NetCore\Todolist\obj\Debug\netcoreapp3.1\Todolist.AssemblyInfo.cs
+E:\LapTrinh\NetCore\Todolist\obj\Debug\netcoreapp3.1\Todolist.csproj.CoreCompileInputs.cache
+E:\LapTrinh\NetCore\Todolist\obj\Debug\netcoreapp3.1\Todolist.MvcApplicationPartsAssemblyInfo.cache

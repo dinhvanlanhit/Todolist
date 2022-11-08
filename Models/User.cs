@@ -23,5 +23,6 @@ namespace Todolist.Models
         public string ADDRESS { get; set; }
         public bool IS_ACTIVE { get; set; }
         public DateTime DATE_CREATE { get; set; }
+         public DateTime DATE_UPDATE { get; set; }
     }
 }

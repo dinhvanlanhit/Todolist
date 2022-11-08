@@ -20,6 +20,7 @@ namespace Todolist.Services
 
     public class UserService : IUserService
     {
+         private DataContext db = new DataContext();
         // users hardcoded for simplicity, store in a db with hashed passwords in production applications
         private List<User> _users = new List<User>
         {
@@ -35,7 +36,7 @@ namespace Todolist.Services
 
         public AuthenticateResponse Authenticate(AuthenticateRequest model)
         {
-            var user = _users.SingleOrDefault(x => x.USERNAME == model.USERNAME && x.PASSWORD == model.PASSWORD);
+            var user = db.Users.SingleOrDefault(x => x.USERNAME == model.USERNAME && x.PASSWORD == model.PASSWORD);
             // return null if user not found
             if (user == null) return null;
 
@@ -47,12 +48,12 @@ namespace Todolist.Services
 
         public IEnumerable<User> GetAll()
         {
-            return _users;
+            return db.Users;
         }
 
         public User GetById(int ID)
         {
-            return _users.FirstOrDefault(x => x.ID == ID);
+            return db.Users.FirstOrDefault(x => x.ID == ID);
         }
 
         // helper methods
