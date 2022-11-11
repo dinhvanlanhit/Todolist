@@ -18,25 +18,72 @@ namespace Todolist.Modules._Todo.Controllers
         [HttpGet("getAll")]
         public IActionResult getAll()
         {
-            var todos = _todoService.GetAll();
-            // return Ok(new{data=todos});
-            return Ok(new {todos = todos});
+            try
+            {
+                var todos = _todoService.GetAll();
+                return Ok(new {todos = todos});
+            }
+            catch (Exception ex)
+            {
+                return Ok(new {Message  = ex.Message});
+            }
+           
         }
-        // [Authorize]
-        // [HttpPost("add")]
-        // public IActionResult add([FromBody] Todo model)
-        // {
-        //     var todos = _todoService.add(Todo);
-        //     // return Ok(new{data=todos});
-        //     return Ok(new {status = true});
-        // }
+        [Authorize]
+        [HttpPost("add")]
+        public IActionResult add([FromBody] Todo model)
+        {
+            try
+            {
+                var todos = _todoService.add(model);
+                return Ok(todos);
+            }
+            catch (Exception ex)
+            {
+                return Ok(new {Message  = ex.Message});
+            }
+        }
+        [Authorize]
+        [HttpPost("edit")]
+        public IActionResult edit([FromBody] Todo model)
+        {
+            try
+            {
+                var todos = _todoService.edit(model);
+                return Ok(todos);
+            }
+            catch (Exception ex)
+            {
+                return Ok(new {Message  = ex.Message});
+            }
+        }
         [Authorize]
         [HttpPost("byid")]
         public IActionResult byid([FromBody] Todo model)
         {
-            var todo = _todoService.byid(model);
-            // return Ok(new{data=todos});
-            return Ok(new {data = todo});
+            try
+            {
+                var todo = _todoService.byid(model);
+                return Ok(new {data = todo});
+            }
+            catch (Exception ex)
+            {
+                return Ok(new {Message  = ex.Message});
+            }
+        }
+        [Authorize]
+        [HttpPost("delete")]
+        public IActionResult delete([FromBody] Todo model)
+        {
+            try
+            {
+                var todos = _todoService.delete(model);
+                return Ok(todos);
+            }
+            catch (Exception ex)
+            {
+                return Ok(new {Message  = ex.Message});
+            }
         }
     }
 }

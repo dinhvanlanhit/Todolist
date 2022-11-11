@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Todolist.Modules._Auth.Services;
+using Todolist.Modules._Todo.Services;
 using Todolist.Helpers;
 public class Startup {
         public IConfiguration Configuration { get; }
@@ -16,6 +17,7 @@ public class Startup {
             services.AddControllers();
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ITodoService, TodoService>();
             services.AddRazorPages();
         }
         public void Configure(WebApplication app, IWebHostEnvironment env) {
