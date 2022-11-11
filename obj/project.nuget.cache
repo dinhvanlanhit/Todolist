@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GC8hw8j4CVoxvVidSGWPojN1VgabIlWdHrGtLLofSCegccrwoEEW5v3bT8RZW4qRnxZN3kkrifMt4iKYJ9B91w==",
+  "dgSpecHash": "IYc9mgRLsuX0uiID0XrK4s87OUGnq8d8yYVtgMFoRpdBcvsfBYCQDNvujUXnK/Hl6TF9Kwh/ut7fhKi9B622oQ==",
   "success": true,
-  "projectFilePath": "E:\\LapTrinh\\NetCore\\Todolist\\Todolist.csproj",
+  "projectFilePath": "D:\\DuLieu\\NetCore\\Todolist\\Todolist.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dinhv\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.6\\microsoft.aspnetcore.authentication.jwtbearer.3.1.6.nupkg.sha512",
     "C:\\Users\\dinhv\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

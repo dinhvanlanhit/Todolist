@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Todolist.Models;
-using Todolist.Services;
+using Todolist.Modules._Auth.Models;
+using Todolist.Modules._Auth.Services;
 using System;
-namespace Todolist.Controllers
+namespace Todolist.Modules._Auth.Controllers
 {
     [Route("api/auth")]
     public class AuthController : ControllerBase

@@ -1,6 +1,6 @@
 
 
-namespace Todolist.Models
+namespace Todolist.Modules._Auth.Models
 {
     public class AuthenticateResponse
     {

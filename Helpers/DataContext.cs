@@ -3,7 +3,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Todolist.Models;
+using Todolist.Modules._Auth.Models;
+using Todolist.Modules._Todo.Models;
 namespace  Todolist.Helpers
 {
     public class DataContext : DbContext

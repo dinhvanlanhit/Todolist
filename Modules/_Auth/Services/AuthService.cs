@@ -7,9 +7,9 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using Todolist.Helpers;
-using Todolist.Models;
+using Todolist.Modules._Auth.Models;
 
-namespace Todolist.Services
+namespace Todolist.Modules._Auth.Services
 {
     public interface IUserService
     {

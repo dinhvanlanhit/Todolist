@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Todolist.Models
+namespace Todolist.Modules._Todo.Models
 {
     [Table("TODOS")]
     public class Todo

@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Todolist.Modules._Auth.Services;
 using Todolist.Helpers;
-using Todolist.Services;
 public class Startup {
         public IConfiguration Configuration { get; }
 

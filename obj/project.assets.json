@@ -4773,19 +4773,21 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\LapTrinh\\NetCore\\Todolist\\Todolist.csproj",
+      "projectUniqueName": "D:\\DuLieu\\NetCore\\Todolist\\Todolist.csproj",
       "projectName": "Todolist",
-      "projectPath": "E:\\LapTrinh\\NetCore\\Todolist\\Todolist.csproj",
+      "projectPath": "D:\\DuLieu\\NetCore\\Todolist\\Todolist.csproj",
       "packagesPath": "C:\\Users\\dinhv\\.nuget\\packages\\",
-      "outputPath": "E:\\LapTrinh\\NetCore\\Todolist\\obj\\",
+      "outputPath": "D:\\DuLieu\\NetCore\\Todolist\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dinhv\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\dinhv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4852,7 +4854,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
