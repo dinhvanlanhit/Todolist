@@ -20,7 +20,7 @@ namespace  Todolist.Helpers
         {
           
             // connect to mysql with connection string from app settings
-            var connectionString ="server=113.161.254.75;database=dinhvanlanh_todolist;user=root;";//Configuration.GetConnectionString("WebApiDatabase");
+            var connectionString ="server=113.161.254.75;database=dinhvanlanh_todolist;user=root;password=amnote123";//Configuration.GetConnectionString("WebApiDatabase");
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }
 
