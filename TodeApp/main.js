@@ -89,14 +89,17 @@ const app = new Vue({
             this.screen = data;
         },
         async buttonSave(){
-            this.statusSave = true;
+            if(this.todoModel.name==""){
+                alert("Vui lòng nhập tên");
+                return false;
+            }
             if(this.todoModel.is_active=="false"){
                 this.todoModel.is_active = false
             }
             if(this.todoModel.is_active=="true"){
                 this.todoModel.is_active = true
             }
-            
+            this.statusSave = true;
             if(this.todoModel.id==""||this.todoModel.id==null){
                 try {
                     delete this.todoModel.id
@@ -106,6 +109,9 @@ const app = new Vue({
                         this.statusSave = false;
                         this.screen = "list";
                         this.getListTodo();
+                    }else{
+                        this.statusSave = false;
+                        alert(res.data.message);
                     }
                 } catch (error) {
                     this.isLogin = false;
@@ -118,6 +124,10 @@ const app = new Vue({
                         this.statusSave = false;
                         this.screen = "list";
                         this.getListTodo();
+                    }
+                    else{
+                        alert(res.data.message);
+                        this.statusSave = false;
                     }
                 } catch (error) {
                     this.isLogin = false;
