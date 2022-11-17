@@ -20,7 +20,7 @@ namespace Todolist.Modules._Auth.Controllers
             // return BadRequest(new { message = "Không hợp lệ : "+model.USERNAME });
             var response = _userService.Authenticate(model);
             if (response == null){
-                return BadRequest(new { message = "Không hợp lệ : "+model.USERNAME });
+                return BadRequest(new { message = "Không hợp lệ : "+model.username });
             }
             return Ok(response);
         }

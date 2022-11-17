@@ -9,11 +9,11 @@ namespace Todolist.Modules._Todo.Models
     public class Todo
     {
         [Key]
-        public int ID { get; set; }
+        public int id { get; set; }
         [StringLength(255)]
-        public string NAME { get; set; }
-        public bool IS_ACTIVE { get; set; }
-        public DateTime DATE_CREATE { get; set; }
-        public DateTime DATE_UPDATE { get; set; }
+        public string name { get; set; }
+        public bool is_active { get; set; }
+        public DateTime date_create { get; set; }
+        public DateTime date_update { get; set; }
     }
 }

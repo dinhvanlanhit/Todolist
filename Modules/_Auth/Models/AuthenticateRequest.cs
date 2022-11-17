@@ -5,9 +5,9 @@ namespace Todolist.Modules._Auth.Models
     public class AuthenticateRequest
     {
         [Required]
-        public string USERNAME { get; set; }
+        public string username { get; set; }
 
         [Required]
-        public string PASSWORD { get; set; }
+        public string password { get; set; }
     }
 }

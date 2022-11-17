@@ -34,16 +34,16 @@ namespace Todolist.Modules._Todo.Services
 
         public Todo byid(Todo todo)
         {
-            return db.Todos.FirstOrDefault(x => x.ID == todo.ID);
+            return db.Todos.FirstOrDefault(x => x.id == todo.id);
         }
         public Response add(Todo todo)
         {
-            var item = db.Todos.FirstOrDefault(x => x.NAME == todo.NAME);
+            var item = db.Todos.FirstOrDefault(x => x.name == todo.name);
             if (item != null)
             {
                 return new Response("Tên đã được sử dụng",false);
             }else{
-                todo.DATE_CREATE = DateTime.Now;
+                todo.date_create = DateTime.Now;
                 db.Todos.Add(todo);
                 var check = db.SaveChanges() > -1;
                 if (check)
@@ -56,14 +56,14 @@ namespace Todolist.Modules._Todo.Services
         }
         public Response edit(Todo todo)
         {
-            var item = db.Todos.FirstOrDefault(x => x.ID == todo.ID);
+            var item = db.Todos.FirstOrDefault(x => x.id == todo.id);
             if (item == null)
             {
                 return new Response("Không tìm thấy dữ liệu",false);
             }else{
-                item.DATE_UPDATE = DateTime.Now;
-                item.NAME = todo.NAME;
-                item.IS_ACTIVE = todo.IS_ACTIVE;
+                item.date_update = DateTime.Now;
+                item.name = todo.name;
+                item.is_active = todo.is_active;
                 db.Todos.Update(item);
                 var check = db.SaveChanges() > -1;
                 if (check)
@@ -77,7 +77,7 @@ namespace Todolist.Modules._Todo.Services
         }
         public Response delete(Todo todo)
         {
-            var item = db.Todos.FirstOrDefault(x => x.ID == todo.ID);
+            var item = db.Todos.FirstOrDefault(x => x.id == todo.id);
             if (item == null)
             {
                 return new Response("Không tìm thấy dữ liệu",false);

@@ -24,7 +24,7 @@ namespace Todolist.Modules._Auth.Services
         // users hardcoded for simplicity, store in a db with hashed passwords in production applications
         private List<User> _users = new List<User>
         {
-            new User { ID = 1, FULLNAME = "admin",  USERNAME = "admin", PASSWORD = "123456" }
+            new User { id = 1, fullname = "admin",  username = "admin", password = "123456" }
         };
 
         private readonly AppSettings _appSettings;
@@ -36,7 +36,7 @@ namespace Todolist.Modules._Auth.Services
 
         public AuthenticateResponse Authenticate(AuthenticateRequest model)
         {
-            var user = db.Users.SingleOrDefault(x => x.USERNAME == model.USERNAME && x.PASSWORD == model.PASSWORD);
+            var user = db.Users.SingleOrDefault(x => x.username == model.username && x.password == model.password);
             // return null if user not found
             if (user == null) return null;
 
@@ -51,9 +51,9 @@ namespace Todolist.Modules._Auth.Services
             return db.Users;
         }
 
-        public User GetById(int ID)
+        public User GetById(int id)
         {
-            return db.Users.FirstOrDefault(x => x.ID == ID);
+            return db.Users.FirstOrDefault(x => x.id == id);
         }
 
         // helper methods
@@ -65,7 +65,7 @@ namespace Todolist.Modules._Auth.Services
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[] { new Claim("ID", user.ID.ToString()) }),
+                Subject = new ClaimsIdentity(new[] { new Claim("id", user.id.ToString()) }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };

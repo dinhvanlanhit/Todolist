@@ -4,22 +4,22 @@ namespace Todolist.Modules._Auth.Models
 {
     public class AuthenticateResponse
     {
-        public int ID { get; set; }
-        public string EMAIL { get; set; }
-        public string FULLNAME { get; set; }
-        public string USERNAME { get; set; }
-        public string ADDRESS { get; set; }
-        public string TOKEN { get; set; }
+        public int id { get; set; }
+        public string email { get; set; }
+        public string fullname { get; set; }
+        public string username { get; set; }
+        public string address { get; set; }
+        public string token { get; set; }
 
 
-        public AuthenticateResponse(User user, string token)
+        public AuthenticateResponse(User user, string _token)
         {
-            ID = user.ID;
-            FULLNAME = user.FULLNAME;
-            EMAIL = user.EMAIL;
-            ADDRESS = user.ADDRESS;
-            USERNAME = user.USERNAME;
-            TOKEN = token;
+            id = user.id;
+            fullname = user.fullname;
+            email = user.email;
+            address = user.address;
+            username = user.username;
+            token = _token;
         }
     }
 }

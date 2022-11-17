@@ -9,20 +9,20 @@ namespace Todolist.Modules._Auth.Models
     public class User
     {
         [Key]
-        public int ID { get; set; }
+        public int id { get; set; }
         [StringLength(30)]
-        public string FULLNAME { get; set; }
+        public string fullname { get; set; }
         [StringLength(100)]
-        public string EMAIL { get; set; }
+        public string email { get; set; }
         [StringLength(100)]
-        public string USERNAME { get; set; }
+        public string username { get; set; }
         [StringLength(100)]
-        public string PASSWORD { get; set; }
-        public int SEX { get; set; }
+        public string password { get; set; }
+        public int sex { get; set; }
         [StringLength(200)]
-        public string ADDRESS { get; set; }
-        public bool IS_ACTIVE { get; set; }
-        public DateTime DATE_CREATE { get; set; }
-         public DateTime DATE_UPDATE { get; set; }
+        public string address { get; set; }
+        public bool is_active { get; set; }
+        public DateTime date_create { get; set; }
+         public DateTime date_update { get; set; }
     }
 }
