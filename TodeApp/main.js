@@ -87,6 +87,11 @@ const app = new Vue({
         buttonBack(data){
             this.statusSave = false;
             this.screen = data;
+            this.todoModel = {
+                id:null,
+                name:null,
+                is_active:false,
+            };
         },
         async buttonSave(){
             if(this.todoModel.name==""){
